@@ -1,0 +1,106 @@
+<header>
+  <div class="header-out">
+    <div class="header-in">
+      <div class="header-in-left">
+        <a><span class="small">O</span>I<span class="small">X</span></a>
+      </div>
+      <div class="header-in-center">
+        <div class="container">
+          <div class="row">
+            <div class="location">
+              <div class="location-1">
+                <div class="location-2">
+                  <span class="location-icon"><i class="fas fa-map-marker-alt"></i></span>
+                  <input class="fetch-location" value="Pakistan">
+                  <span class="down-icon" (click)="toggleLocation()">
+                    <i class="fas fa-angle-down"></i>
+                  </span>
+                </div>
+                <div class="location-3" [ngClass]="openLocation ? 'show-loc' : 'hide-loc'">
+                  <div class="location-3-inner">
+                    <div class="current-location">
+                      <div class="current-location-inner">
+                        <span class="current-location-icon">
+                          <i class="far fa-dot-circle"></i>
+                        </span>
+                        <div class="current-location-name">
+                          <span>Current location</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="popular-location">
+                      <div class="pl-header">
+                        <span>Popular locations</span>
+                      </div>
+                      <div class="pl-body">
+                        <div class="pl-body-list">
+                          <span class="pl-list-icon">
+                            <i class="fas fa-map-marker"></i>
+                          </span>
+                          <div class="pl-list-name">
+                            <span>Punjab</span>
+                          </div>
+                        </div>
+                        <div class="pl-body-list">
+                          <span class="pl-list-icon">
+                            <i class="fas fa-map-marker"></i>
+                          </span>
+                          <div class="pl-list-name">
+                            <span>Islamabad Capital Territory</span>
+                          </div>
+                        </div>
+                        <div class="pl-body-list">
+                          <span class="pl-list-icon">
+                            <i class="fas fa-map-marker"></i>
+                          </span>
+                          <div class="pl-list-name">
+                            <span>Sindh</span>
+                          </div>
+                        </div>
+                        <div class="pl-body-list">
+                          <span class="pl-list-icon">
+                            <i class="fas fa-map-marker"></i>
+                          </span>
+                          <div class="pl-list-name">
+                            <span>Khyber Pakhtunkhwwa</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-bar">
+              <div class="type-area">
+                <form class="search-form">
+                  <fieldset>
+                    <div>
+                      <input type="text" placeholder="Find Cars, Mobile Phones and more ..." value="">
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+            <div class="search-button">
+              <span class="search-icon">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-in-right">
+        <span class="login-button">Login</span>
+        <button class="sell-button">
+          <div class="sell-icon">
+            <svg width="22px" height="22px" viewBox="0 0 1024 1024">
+              <path class="rui-3dkbp" d="M396.8 597.333c0 63.623 51.577 115.2 115.2 115.2s115.2-51.577 115.2-115.2c0-63.623-51.577-115.2-115.2-115.2v0c-63.623 0-115.2 51.577-115.2 115.2v0zM341.333 597.333c0-94.257 76.41-170.667 170.667-170.667s170.667 76.41 170.667 170.667c0 94.257-76.41 170.667-170.667 170.667v0c-94.257 0-170.667-76.41-170.667-170.667v0zM170.667 810.667h682.667v-426.667h-682.667zM725.333 298.667h128v-85.333h-128zM682.667 128h213.333l42.667 42.667v682.667l-42.667 42.667h-768l-42.667-42.667v-512l42.667-42.667h512v-128z"></path>
+            </svg>
+          </div>
+          <span>Sell</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

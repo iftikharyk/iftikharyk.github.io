@@ -1,0 +1,665 @@
+.header-bar {
+    padding: 68px 16px 0;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+    margin: 0 0 4px;
+    z-index: 9;
+
+    section {
+        height: 44px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1280px;
+        position: relative;
+
+        .categories {
+            display: flex;
+            width: 312px;
+            height: 100%;
+            align-items: center;
+            position: relative;
+
+            .categories-inner {
+                display: flex;
+                align-items: baseline;
+                margin-top: 2px;
+                text-transform: uppercase;
+                font-weight: 600;
+                cursor: pointer;
+                color: #002f34;
+
+                .cat-title-name {
+                    font-size: 14px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .cat-title-icon {
+                    text-align: center;
+                    transition: transform .5s;
+                    margin-left: auto;
+                    color: #002f34;
+                    height: 40px;
+                    width: 40px;
+                    display: inline-flex;
+                    cursor: pointer;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+            }
+
+            .cat-list {
+                margin: 0;
+                padding: 0;
+                z-index: 2;
+                position: absolute;
+                box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+                background: #fff;
+                height: 588px;
+                overflow: scroll;
+                top: 44px;
+                left: 0;
+                width: 100%;
+
+                li {
+                    height: 48px;
+                    font-size: 14px;
+                    list-style: none;
+                    text-align: inherit;
+
+                    .content {
+                        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+                        display: flex;
+                        flex-direction: column;
+                        background: #fff;
+                        width: 100%;
+
+                        .all-cat, .cat-option {
+                            display: flex;
+                            position: relative;
+                            border-top: 1px solid rgba(0, 47, 57, .2);
+                        }
+
+                        .all-cat {
+
+                            &:hover {
+                                background-color: #cbf7ee;
+                                cursor: pointer;
+                            }
+
+                            .cat-list-icon {
+                                padding: 0 16px;
+                                margin: 0;
+                                display: block;
+                                height: 48px;
+                                line-height: 48px;
+                                text-decoration: none;
+                                color: rgba(0, 47, 57, .64);
+
+                                svg {
+                                    width: 20px;
+                                    height: 20px;
+                                    position: relative;
+                                    top: 4px;
+                                }
+                            }
+
+                            .cat-list-name {
+                                height: 48px;
+                                display: block;
+                                padding: 0;
+                                line-height: 48px;
+                                text-decoration: none;
+                                color: rgba(0,47,52,.64);
+                                cursor: pointer;
+                            }
+
+                            &:hover > .cat-list-icon, &:hover > .cat-list-name {
+                                color: #002f34;
+                            }
+                        }
+
+                        .cat-option {
+                            flex-direction: column;
+                            min-height: 48px;
+                            height: auto;
+
+                            .nested-option {
+                                display: flex;
+
+                                &:hover {
+                                    background-color: #cbf7ee;
+                                    cursor: pointer;
+                                }
+
+                                .nested-option-left {
+                                    display: flex;
+                                    flex: 1;
+                                    min-width: 80%;
+
+                                    .cat-list-icon {
+                                        padding: 0 16px;
+                                        margin: 0;
+                                        display: block;
+                                        height: 48px;
+                                        line-height: 48px;
+                                        text-decoration: none;
+                                        color: rgba(0, 47, 57, .64);
+        
+                                        svg {
+                                            width: 20px;
+                                            height: 20px;
+                                            position: relative;
+                                            top: 4px;
+                                        }
+
+                                        &:hover {
+                                            color: #002f34;
+                                        }
+                                    }
+
+                                    a {
+                                        padding: 0;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        height: auto;
+                                        width: 100%;
+                                        align-self: center;
+                                        display: block;
+                                        line-height: 48px;
+                                        text-decoration: none;
+                                        color: rgba(0, 47, 57, .64);
+                                        background: transparent;
+
+                                        &:hover {
+                                            color: #002f34;
+                                        }
+                                    }
+                                }
+
+                                .nested-option-right {
+                                    
+                                    svg {
+                                        width: 20px;
+                                        height: 20px;
+                                        position: relative;
+                                        top: 13px;
+                                    }
+                                }
+                            }
+
+                            .sub-cat {
+                                max-height: 400px;
+                                height: auto;
+                                overflow: scroll;
+
+                                .option-inner {
+                                    
+                                    .opt {
+
+
+                                        a {
+                                            overflow: hidden;
+                                            color: rgba(0, 47, 57, .64);
+                                            font-size: 12px;
+                                            padding: 0 0 0 48px;
+                                            height: 48px;
+                                            display: block;
+                                            line-height: 48px;
+                                            text-decoration: none;
+                                            background: transparent;
+
+                                            &:hover, &:hover > span {
+                                                background-color: #cbf7ee;
+                                                cursor: pointer;
+                                                color: #002f34 !important;
+                                            }
+
+                                            span {
+                                                white-space: nowrap;
+                                                text-overflow: ellipsis;
+                                                overflow: hidden;
+                                                color: rgba(0, 47, 57, .64);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            // .sub-cat-close {
+                            //     max-height: 0px;
+                            //     transition: max-height .15s ease-out;
+                            // }
+                        }
+                    }
+                }
+            }
+
+            // .cat-list.disappear {
+            //     display: none;
+            // }
+        }
+    }
+}
+
+.hide-cat {
+    display: none;
+}
+
+.show-cat {
+    display: block;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 0;
+    background: #fff;
+    display: block;
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1280px;
+
+        section {
+            display: block;
+
+            .home-banner {
+                height: 252px;
+                margin: 0 0 40px;
+                display: flex;
+                align-items: center;
+
+                .banner-image {
+                    background-image: url('/assets/hero-bg.jpg');
+                    height: 252px;
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                    background-size: cover;
+                    position: absolute;
+                    top: 121px;
+                    left: 0;
+                    right: 0;
+                    z-index: 1;
+                }
+            }
+
+            .main-home-content {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+
+                .popular-categories {
+                    padding: 0px 24px;
+                    width: 100%;
+                    margin-left: auto;
+                    left: auto;
+                    right: auto;
+                    // float: left;
+                    min-height: 1;
+                    box-sizing: border-box;
+                    position: relative;
+
+                    .content-inner {
+                        margin: 0 auto;
+                        max-width: 1240px;
+
+                        .heading {
+                            display: flex;
+                            color: #002f34;
+
+                            .left {
+                                
+                                .heading-big {
+                                    font-size: 24px;
+                                    font-weight: 600;
+                                }
+
+                                .heading-small {
+                                    font-size: 16px;
+                                    margin-top: 16px;
+                                }
+                            }
+
+                            .right {
+                                margin-left: auto;
+                                align-self: flex-end;
+                                cursor: pointer;
+                                font-size: 14px;
+                                color: #2a65ea;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                                text-decoration: none;
+
+                                .view-all-icon {
+                                    margin-left: 8px;
+                                }
+                            }
+                        }
+
+                        .cat-boxes {
+                            text-align: center;
+
+                            .cat-box-container {
+                                display: flex;
+                                flex-wrap: wrap;
+                                list-style: none;
+                                padding-left: 0;
+                                margin-top: 32px;
+
+                                .cat-box {
+                                    background: #fff;
+                                    border-top: 1px solid rgba(0, 47, 57, .2);
+                                    border-top: 1px solid rgba(0, 47, 57, .2);
+                                    border-left: 1px solid rgba(0, 47, 57, .2);
+                                    display: inline-block;
+                                    font-size: 10px;
+                                    vertical-align: top;
+                                    text-align: left;
+                                    box-sizing: border-box;
+                                    width: 25%;
+
+                                    .cat-box-header {
+                                        height: 80px;
+                                        box-sizing: border-box;
+
+                                        a {
+                                            align-items: center;
+                                            display: flex;
+                                            padding: 16px 24px;
+                                            height: 100%;
+                                            box-sizing: border-box;
+                                            text-decoration: none;
+                                            cursor: pointer;
+
+                                            .cat-name-icon {
+                                                color: #002f34;
+
+                                                svg {
+                                                    width: 20px;
+                                                    height: 25px;
+                                                    position: relative;
+                                                    top: 5px;
+                                                }
+                                            }
+
+                                            .cat-name {
+                                                color: #002f34;
+                                                flex: 1 1 auto;
+                                                font-size: 16px;
+                                                font-weight: 700;
+                                                margin-left: 24px;
+                                                vertical-align: middle;
+                                                text-transform: uppercase;
+                                                margin-top: 8px;
+                                                text-align: left;
+                                            }
+                                        }
+                                    }
+
+                                    .cat-box-body {
+                                        border-top: 1px solid rgba(0, 47, 57, .2);
+                                        min-height: 160px;
+                                        width: 100%;
+                                        font-size: 10px;
+                                        text-align: left;
+
+                                        .cat-box-body-list-container {
+                                            font-size: 14px;
+                                            line-height: 30px;
+                                            list-style: none;
+                                            padding: 24px;
+                                            text-align: left;
+                                            margin-top: 0px;
+
+                                            .cat-box-body-list {
+
+                                                a {
+                                                    text-decoration: none;
+                                                    cursor: pointer;
+                                                    font-size: 14px;
+                                                    color: rgba(0, 47, 57, .64);
+                                                    background: transparent;
+
+                                                    &:hover {
+                                                        color: #002f34;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .cat-box:nth-child(4n+4) {
+                                    border-right: 1px solid rgba(0, 47, 57, .2);
+                                }
+
+                                .cat-box:nth-child(n+5) {
+                                    border-bottom: 1px solid rgba(0, 47, 57, .2);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .top-picks {
+                    padding: 4px 24px 80px 24px;
+                    width: 100%;
+                    margin-left: auto;
+                    left: auto;
+                    right: auto;
+                    min-height: 1;
+                    box-sizing: border-box;
+                    position: relative;
+
+                    .top-picks-container {
+
+                        .heading {
+                            font-size: 24px;
+                            margin: 0 0 8px;
+                            font-weight: 600;
+                            color: #002f34;
+                        }
+
+                        .top-picks-content {
+
+                            .top-picks-box-container {
+                                margin: 0 -8px;
+                                padding: 0;
+                                list-style: none;
+
+                                .top-picks-box {
+                                    height: 266px;
+                                    width: calc(25% - 16px);
+                                    border-radius: 2px;
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    margin: 8px;
+                                    padding: 0;
+                                    text-align: left;
+                                    position: relative;
+                                    box-sizing: border-box;
+
+                                    a {
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 100%;
+                                        height: 100%;
+                                        position: relative;
+                                        text-decoration: none;
+                                        box-sizing: border-box;
+                                        background: #fff;
+                                        border: 1px solid rgba(0,47,52,.2);
+                                        overflow: hidden;
+
+                                        figure {
+                                            margin: 0;
+                                            overflow: hidden;
+                                            position: relative;
+                                            background-color: #fff;
+                                            padding: 8px;
+                                            box-sizing: border-box;
+                                            height: 160px;
+                                            display: block;
+
+                                            img {
+                                                max-height: 100%;
+                                                max-width: 100%;
+                                                display: block;
+                                                margin: auto;
+                                                border-style: none;
+                                            }
+                                        }
+
+                                        .top-picks-body {
+                                            border-left: 5px solid #f8dd3c;
+                                            position: static;
+                                            display: flex;
+                                            flex-direction: column;
+                                            flex: 1;
+                                            padding: 8px 16px;
+
+                                            .featured-label {
+                                                display: initial;
+
+                                                label {
+                                                    position: absolute;
+                                                    top: 8px;
+                                                    left: 8px;
+                                                    text-transform: uppercase;
+                                                    padding: 0;
+                                                    text-align: left;
+                                                    display: block;
+                                                    margin: 4px 0;
+                                                    z-index: 2;
+
+                                                    span {
+                                                        background-color: #f8dd3c;
+                                                        color: #002f34;
+                                                        font-size: 10px;
+                                                        padding: 5px 8px;
+                                                        font-weight: 600;
+                                                        width: auto;
+                                                        display: block;
+                                                        
+                                                    }
+                                                }
+                                            }
+
+                                            .item-price {
+                                                text-align: left;
+                                                display: block;
+                                                max-width: 85%;
+                                                width: auto;
+                                                font-weight: 700;
+                                                margin: 0px;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                color: #002f34;
+                                                font-size: 20px;
+                                                position: relative;
+                                            }
+
+                                            .item-title {
+                                                font-weight: 400;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                margin: 5px 0px;
+                                                text-align: left;
+                                                display: block;
+                                                color: rgba(0,47,52,.64);
+                                                font-size: 14px;
+                                                position: relative;
+                                                z-index: 2;
+                                                width: auto;
+                                            }
+
+                                            .item-location {
+                                                font-size: 10px;
+                                                display: flex;
+                                                margin-top: auto;
+                                                justify-content: space-between;
+                                                text-transform: uppercase;
+                                                color: rgba(0,47,52,.64);
+
+                                                .item-place {
+                                                    max-width: 75%;
+                                                    color: rgba(0,47,52,.64);
+                                                    display: inline-block;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;
+                                                    text-transform: uppercase;
+                                                }
+
+                                                .item-posted {
+                                                    text-transform: uppercase;
+                                                    margin-left: auto;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    span.fav-heart {
+                                        bottom: 66px;
+                                        position: absolute;
+                                        z-index: 8;
+                                        right: 5px;
+                                        height: 40px;
+                                        width: 40px;
+                                        display: inline-flex;
+                                        cursor: pointer;
+                                        justify-content: center;
+                                        align-items: center;
+                                        box-sizing: border-box;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .load-more {
+                        text-align: center;
+                        margin-top: 20px;
+
+                        .load-more-button {
+                            color: #2a65ea;
+                            box-shadow: inset 0 0 0 2px #2a65ea;
+                            font-size: 16px;
+                            height: 48px;
+                            -webkit-appearance: button;
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            box-sizing: border-box;
+                            border-style: none;
+                            background: none;
+                            outline: none;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            font-family: Poppins,Arial,Helvetica,sans-serif;
+                            cursor: pointer;
+                            padding: 0 12px;
+                            position: relative;
+                            overflow: hidden;
+                            line-height: normal;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
