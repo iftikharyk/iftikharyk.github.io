@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1567689496083,
+  "timestamp": 1567690050075,
   "index": "https://iftikharyk.github.io/news-app/index.html",
   "assetGroups": [
     {
@@ -11,7 +11,7 @@
         "https://iftikharyk.github.io/news-app/es2015-polyfills.bda95d5896422d031328.js",
         "https://iftikharyk.github.io/news-app/favicon.ico",
         "https://iftikharyk.github.io/news-app/index.html",
-        "https://iftikharyk.github.io/news-app/main.a977d5d1358f426aa83f.js",
+        "https://iftikharyk.github.io/news-app/main.c80de9e172cab102bd6f.js",
         "https://iftikharyk.github.io/news-app/polyfills.8bbb231b43165d65d357.js",
         "https://iftikharyk.github.io/news-app/runtime.26209474bfa8dc87a77c.js",
         "https://iftikharyk.github.io/news-app/styles.38a10f7d61ef761b185f.css"
@@ -321,8 +321,8 @@
     "https://iftikharyk.github.io/news-app/assets/images/ynet.png": "69155300e78e146b9554f28f7d25b8f7d7eb740a",
     "https://iftikharyk.github.io/news-app/es2015-polyfills.bda95d5896422d031328.js": "1612fe8f7e8e0c856f0885ff179e93363c67834f",
     "https://iftikharyk.github.io/news-app/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://iftikharyk.github.io/news-app/index.html": "73dbe680ed229ba7b656fa9839c96bc4fd2b75d7",
-    "https://iftikharyk.github.io/news-app/main.a977d5d1358f426aa83f.js": "ea63d045d329fbe0ccf2d3c17dd264259394ae2b",
+    "https://iftikharyk.github.io/news-app/index.html": "73a161a9c4a2b026db53a18220b7ad227871703b",
+    "https://iftikharyk.github.io/news-app/main.c80de9e172cab102bd6f.js": "f095d941c3b18382bc30760145aed987568c2ac7",
     "https://iftikharyk.github.io/news-app/polyfills.8bbb231b43165d65d357.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "https://iftikharyk.github.io/news-app/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "https://iftikharyk.github.io/news-app/styles.38a10f7d61ef761b185f.css": "2d44c18e4f195c72f70517d29777f13b718a7e2d"
