@@ -25,7 +25,7 @@
                     </div>
                     <div class="header-right">
                         <ul class="main-menu">
-                            <li class="main-menu-item active">
+                            <li class="main-menu-item">
                                 <a href="index.html">Home</a>
                             </li>
                             <li class="main-menu-item">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="header-main">
+            <div class="header-main">
                 <div class="header-container">
                     <div class="header-left">
                         <div class="logo">
@@ -55,7 +55,7 @@
                             <div class="search-container-inner">
                                 <div class="search-field">
                                     <span class="text">
-                                        <input type="text" placeholder="Search Products">
+                                        <input class="search-input" type="text" placeholder="Search Products">
                                     </span>
                                     <span class="button-wrap">
                                         <button class="search-button"><i class="fas fa-search"></i></button>
@@ -63,29 +63,92 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="account-container"></div>
-                        <div class="wishlist-container"></div>
-                        <div class="cart-container"></div>
+                        <div class="account-container">
+                            <a href="#" class="account-link">
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                        <span class="seperator"></span>
+                        <div class="wishlist-container">
+                            <a href="#" class="wishlist-link">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                        </div>
+                        <span class="seperator"></span>
+                        <div class="cart-container">
+                            <div class="cart-head">
+                                <div class="cart-icon">
+                                    <i class="fas fa-heart"></i>
+                                    <span class="cart-badge">0</span>
+                                </div>
+                                <span class="cart-item-text">0 items</span>
+                            </div>
+                            <div class="cart-popup">
+                                <div class="cart-popup-content">
+                                    <div class="cart-popup-title">
+                                        <span>0 Items</span>
+                                        <a href="#" class="view-cart">View Cart</a>
+                                    </div>
+                                    <ul class="cart-product-list-empty">
+                                        <li class="cart-product-empty">No products in the cart</li>
+                                    </ul>
+                                    <div class="cart-has-products">
+                                        <ul class="cart-product-list">
+                                            <li class="cart-product">
+                                                <div class="product-image">
+                                                    <div class="product-image-inner">
+                                                        <a href="#" class="product-link">
+                                                            <img src="assets/images/glasses.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="product-detail">
+                                                    <a href="#">Black Jacket - Black, Medium</a>
+                                                    <span class="quantity">
+                                                        1 x
+                                                        <span class="product-price">
+                                                            <span class="currency">$</span>
+                                                            100.00
+                                                        </span>
+                                                    </span>
+                                                    <a href="#" class="delete-button"></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <p class="cart-total">
+                                            <strong>Subtotal:</strong>
+                                            <span class="cart-total-price">
+                                                <span class="currency">$</span>
+                                                100.00
+                                            </span>
+                                        </p>
+                                        <p class="cart-checkout">
+                                            <button class="checkout">Checkout</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </header>
 
-    <div class="bread-container">
-        <div class="container-fluid">
-            <nav aria-label="breadcrumb" class="bread-nav">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Category</a></li>
-                    <li class="breadcrumb-item"><a href="#">Sub-Category</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Product Name</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-
     <div class="product-detail-container">
+        <div class="bread-container">
+            <div class="container-fluid">
+                <nav aria-label="breadcrumb" class="bread-nav">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Category</a></li>
+                        <li class="breadcrumb-item"><a href="#">Sub-Category</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Product Name</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row">

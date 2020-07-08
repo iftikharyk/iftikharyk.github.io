@@ -167,9 +167,33 @@ header {
         }
 
         .header-main {
-            background: none;
+            background: rgba(153,149,146,1);
             position: relative;
             top: 0;
+
+            &.fixed {
+                position: fixed;
+                width: 100%;
+                background: rgba(153,149,146,1);
+                transition: left .3s;
+
+                .header-container {
+                    height: 70px;
+
+                    .header-left {
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                    }
+                    .header-left {
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+
+                        .logo {
+                            max-width: 100px;
+                        }
+                    }
+                }
+            }
 
             .header-container {
                 display: flex;
@@ -262,13 +286,364 @@ header {
                                     display: block;
                                     text-align: left;
 
-                                    input {
+                                    input.search-input {
                                         width: 350px;
                                         height: 42px;
                                         font-size: 11px;
-                                        font-style: italic;
+                                        line-height: 1.5;
                                         font-weight: 400;
-                                        border-color: transparent;
+                                        color: #fff;
+                                        border: none;
+                                        padding: 0 15px;
+                                        background: none;
+                                        border-radius: 0px;
+                                        outline: none;
+                                        box-shadow: none;
+                                        margin-bottom: 0;
+                                        display: block;
+                                        text-align: left;
+
+                                        &::placeholder {
+                                            color: #fff ;
+                                        }
+                                    }
+                                }
+
+                                span.button-wrap {
+                                    margin: 0;
+                                    display: block;
+                                    text-align: left;
+
+                                    button.search-button {
+                                        height: 42px;
+                                        line-height: 42px;
+                                        font-size: 20px;
+                                        color: #fff;
+                                        padding: 0 12px;
+                                        background: none;
+                                        border-radius: 0;
+                                        border: none;
+                                        margin-bottom: 0;
+                                        display: block;
+                                        cursor: pointer;
+                                        font-weight: 700;
+                                        letter-spacing: 0.1em;
+                                        transition: all 0.1s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    span.seperator {
+                        height: 2.5rem;
+                        border-left: 1px solid rgba(255, 255, 255, .09);
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    .account-container {
+                        margin-left: 1.5rem;
+                        margin-right: 0.25rem;
+
+                        a.account-link {
+                            color: #fff;
+                            display: inline-block;
+                            padding: 0 .125rem;
+                            font-size: 24px;
+                            vertical-align: middle;
+                            text-decoration: none;
+
+                            svg {
+                                font-size: 27px;
+                                display: block;
+                                position: relative;
+                                top: -1px;
+                            }
+                        }
+                    }
+
+                    .wishlist-container {
+                        margin-left: .875rem;
+                        margin-right: 0.25rem;
+
+                        a.wishlist-link {
+                            color: #fff;
+                            display: inline-block;
+                            padding: 0 .125rem;
+                            font-size: 24px;
+                            vertical-align: middle;
+                            text-decoration: none;
+
+                            svg {
+                                font-size: 27px;
+                                display: block;
+                                position: relative;
+                                top: -1px;
+                            }
+                        }
+                    }
+
+                    .cart-container {
+                        font-size: 15px;
+                        display: inline-block;
+                        position: relative;
+                        white-space: normal;
+                        vertical-align: middle;
+                        margin-left: .875rem;
+
+                        &:hover {
+                            .cart-popup {
+                                display: block;
+                            }
+                        }
+
+                        .cart-head {
+                            max-width: 32px;
+                            min-height: 30px;
+                            position: relative;
+                            cursor: pointer;
+                            margin-top: 0;
+                            justify-content: center;
+                            display: flex;
+                            align-items: center;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 100%;
+                                height: 15px;
+                                left: 0;
+                                width: 100%;
+                                z-index: 1;
+                            }
+
+                            .cart-icon {
+                                position: relative;
+                                line-height: 0;
+                                font-weight: 400;
+
+                                svg {
+                                    font-size: 27px;
+                                    display: block;
+                                    position: relative;
+                                    top: -1px;
+                                }
+
+                                span.cart-badge {
+                                    background: $dark;
+                                    color: $white;
+                                    width: 15px;
+                                    height: 15px;
+                                    line-height: 15px;
+                                    font-size: 9px;
+                                    box-shadow: -1px 1px 2px 0 rgba(0,0,0,.3);
+                                    top: -5px;
+                                    right: -9px;
+                                    position: absolute;
+                                    font-weight: 600;
+                                    text-align: center;
+                                    display: inline-block;
+                                    border-radius: 8px;
+                                    overflow: hidden;
+                                }
+                            }
+
+                            span.cart-item-text {
+                                color: #fff;
+                                font-size: 14px;
+                                display: none;
+                            }
+                        }
+
+                        .cart-popup {
+                            color: #525252;
+                            position: absolute;
+                            width: 300px;
+                            z-index: 1003;
+                            top: 100%;
+                            margin-top: 0;
+                            right: 0;
+                            padding: 0;
+                            line-height: 38px;
+                            box-shadow: 0 5px 8px rgba(0,0,0,.15);
+                            text-align: left;
+                            display: none;
+                            // animation: menuFadeInDown .2s ease-out;
+
+                            .cart-popup-content {
+                                background: $white;
+                                padding: 10px 15px 5px;
+                                color: #525252;
+                                font-weight: 700;
+                                font-size: 13px;
+                                border-radius: 0;
+
+                                .cart-popup-title {
+                                    padding: 3px 10px;
+                                    border-bottom: solid 1px #e6ebee;
+
+                                    // span.total-items {}
+
+                                    a.view-cart {
+                                        color: #525252;
+                                        text-decoration: none;
+                                        float: right;
+                                    }
+                                }
+
+                                ul.cart-product-list-empty {
+                                    min-height: 45px;
+                                    max-height: 300px;
+                                    overflow-y: auto;
+                                    overflow-x: hidden;
+                                    margin: 0;
+                                    list-style: none;
+                                    padding: 0;
+
+                                    display: none;
+
+                                    li.cart-product-empty {
+                                        display: flex;
+                                        align-items: center;
+                                        text-align: center;
+                                        justify-content: center;
+                                        padding: 8px 0 0;
+                                        font-weight: 400;
+                                    }
+                                }
+
+                                .cart-has-products {
+                                    ul.cart-product-list {
+                                        min-height: 45px;
+                                        max-height: 300px;
+                                        overflow: hidden auto;
+                                        margin: 0;
+                                        list-style: none;
+                                        padding: 0;
+
+                                        li.cart-product {
+                                            padding: 15px 10px;
+                                            border-bottom: 1px solid #e6ebee;
+                                            display: flex;
+                                            align-items: center;
+                                            position: relative;
+                                            line-height: 24px;
+
+                                            .product-image {
+                                                order: 2;
+                                                margin-right: 0;
+                                                flex: 0 0 80px;
+                                                width: 80px;
+                                                padding: 0;
+                                                background: #fff;
+                                                display: block;
+                                                position: relative;
+                                                border: none;
+
+                                                .product-image-inner {
+                                                    display: block;
+                                                    overflow: hidden;
+                                                    position: relative;
+
+                                                    a.product-link {
+                                                        text-decoration: none;
+
+                                                        img {
+                                                            width: 100%;
+                                                            height: auto;
+                                                            display: inline-block;
+                                                            transition: opacity 0.3s ease-in-out;
+                                                            transform: translateZ(0);
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .product-detail {
+                                                padding-top: 0;
+                                                position: static;
+                                                max-width: calc(100% - 80px);
+                                                flex: 1;
+
+                                                a {
+                                                    line-height: 19px;
+                                                    text-decoration: none;
+                                                    font-size: .8125em;
+                                                    font-weight: 500;
+                                                    display: block;
+                                                    color: #525252;
+                                                }
+
+                                                span.quantity {
+                                                    font-weight: normal;
+                                                    font-size: 13px;
+                                                    vertical-align: baseline;
+                                                    color: #525252;
+
+                                                    span.product-price {
+                                                        font-size: 13px;
+                                                        vertical-align: baseline;
+                                                        line-height: 1;
+                                                    }
+                                                }
+
+                                                a.delete-button {
+                                                    line-height: 19px;
+                                                    color: #525252;
+                                                    z-index: 3;
+                                                    text-align: center;
+                                                    font-size: 11px;
+                                                    top: 8px;
+                                                    right: 8px;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    background-color: #fff;
+                                                    border-radius: 100%;
+                                                    box-shadow: 0 2px 6px 0 rgba(0,0,0,.5);
+                                                    text-decoration: none;
+                                                    padding: 0;
+                                                    position: absolute;
+
+                                                    &::before {
+                                                        content: "X";
+                                                        font-family: "Font Awesome 5 Free";
+                                                        font-weight: 900;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    p.cart-total {
+                                        padding: 10px;
+                                        text-align: left;
+                                        text-transform: uppercase;
+                                        color: #525252;
+
+                                        span.cart-total-price {
+                                            float: right;
+                                            font-size: 15px;
+                                            font-weight: 700;
+                                        }
+                                    }
+
+                                    p.cart-checkout {
+                                        margin-bottom: 0;
+                                        padding: 0 10px 20px;
+
+                                        button.checkout {
+                                            float: none;
+                                            width: 100%;
+                                            color: #525252;
+                                            border: none;
+                                            font-size: 12px;
+                                            letter-spacing: .025em;
+                                            text-transform: uppercase;
+                                            padding: 5px 25px;
+                                            border-radius: 2px;
+                                            background: $golden;
+                                        }
                                     }
                                 }
                             }
@@ -583,6 +958,18 @@ footer {
 }
 
 #home-page {
+
+    header {
+        .header-wrapper {
+            .header-main {
+                background: transparent;
+
+                &.fixed {
+                    background: rgba(153,149,146,1);
+                }
+            }
+        }
+    }
 
     .home-banner-container {
         margin-bottom: -20px;
@@ -1438,7 +1825,7 @@ footer {
 
 #single-product-page {
     .product-detail-container {
-        padding: 20px 0px;
+        padding: 180px 0px 0px 20px;
         
         .wrapper {
             padding: 0px 30px;
@@ -2172,6 +2559,7 @@ footer {
     .banner {
         width: 100%;
         height: 40%;
+        padding-top: 155px;
 
         img {
             width: 100%;
@@ -2323,6 +2711,7 @@ footer {
     .banner {
         width: 100%;
         height: 40%;
+        padding-top: 155px;
 
         img {
             width: 100%;
