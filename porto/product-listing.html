@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body id="product-list-page">
+
+    <div id="banner" style="background-image: url('assets/images/banner.jpg');">
+        <div class="banner-text">
+            <h4>New Season Sale</h4>
+            <h1>40% Off</h1>
+            <button class="btn btn-custom white">
+                Shop Now <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div class="container-fluid">
+            <div class="bread-container">
+                <nav aria-label="breadcrumb" class="bread-nav">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div id="listing-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="sidebar">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header" id="category-group">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left" type="button"
+                                                    data-toggle="collapse" data-target="#categories-collapse"
+                                                    aria-expanded="true" aria-controls="categories-collapse">
+                                                    Categories
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="categories-collapse" class="collapse show"
+                                            aria-labelledby="category-group" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="price-group">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link btn-block text-left" type="button"
+                                                    data-toggle="collapse" data-target="#price-collapse"
+                                                    aria-expanded="true" aria-controls="price-collapse">
+                                                    Price
+                                                    <i class="fas fa-plus"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+
+                                        <div id="price-collapse" class="collapse show" aria-labelledby="price-group"
+                                            data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Accessories</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div id="product-listing">
+                                <div id="filters">
+                                    <div class="row">
+
+                                    </div>
+                                </div>
+                                <div id="product-grid">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="product-box">
+                                                <div class="product-image">
+                                                    <img src="assets/images/banner.jpg" alt="">
+                                                    <button class="btn quick-view">Quick View</button>
+                                                </div>
+                                                <div class="product-text">
+                                                    <span class="icon">
+                                                        <i class="fas fa-arrow-right"></i>
+                                                    </span>
+                                                    <div class="category-name">Category Name</div>
+                                                    <div class="product-title">Product Name</div>
+                                                    <div class="product-price">$190.00</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/fontawesome/js/all.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
