@@ -1,0 +1,203 @@
+.max-width {
+    max-width: 68%;
+    margin: 0 auto;
+
+    .vertical-center {
+        position: absolute;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            position: fixed;
+            line-height: 110%;
+            letter-spacing: -2px;
+            font-size: 18vmin;
+            font-weight: bold;
+
+            .hide-text-block {
+                position: relative;
+                display: block;
+                overflow: hidden;
+
+                a, a:visited, a:after {
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: black;
+                }
+
+                .text-before {
+                    animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+                    animation-fill-mode: backwards;
+                    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+                    color: white;
+
+                    &:hover {
+                        margin-left: 40px;
+                        transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+
+                        &.label-hello::after {
+                            content: "About";
+                        }
+
+                        &.label-iam::after {
+                            content: "Work";
+                        }
+
+                        &.label-name::after {
+                            content: "Contact";
+                        }
+                    }
+
+                    &.label-hello::after {
+                        content: "Hello.";
+                    }
+
+                    &.label-iam::after {
+                        content: "I am";
+                    }
+
+                    &.label-name::after {
+                        content: "Iftikhar";
+                    }
+                }
+
+                .text-after {
+                    animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+                    animation-fill-mode: backwards;
+                    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .max-width {
+        .vertical-center {
+            h1 {
+                .text-after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .tap-area {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tap-area {
+        background: transparent;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    
+        .tap-indication {
+            text-align: center;
+            width: 100%;
+            font-weight: 500;
+            color: white;
+            position: fixed;
+            bottom: 4%;
+            font-size: 3.6vmin;
+            animation: bounce .5s cubic-bezier(.5, .6, .6, 1) infinite alternate;
+        }
+    }
+
+    .max-width {
+        max-width: 86%;
+        margin: 0 auto;
+
+        .vertical-center {
+            position: absolute;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            h1 {
+                line-height: 130%;
+                position: fixed;
+                letter-spacing: -2px;
+                font-size: 18vmin;
+
+                .hide-text-block {
+                    position: relative;
+                    display: block;
+                    overflow: hidden;
+
+                    .text-before {
+                        animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+                        animation-fill-mode: backwards;
+                        transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+                        color: white;
+                    }
+
+                    .text-after {
+                        display: none;
+                        animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+                        animation-fill-mode: backwards;
+                        transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .bg-photo {
+        left: -8% !important;
+    }
+}
+
+.bg-photo {
+    z-index: -9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 35%;
+    background-image: url('https://www.dejan.works/img/DejanHome.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: bg-photo 1.2s cubic-bezier(.5, .6, .6, 1);
+    animation-fill-mode: backwards;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateY(30vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes bg-photo {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-8px);
+    }
+}
