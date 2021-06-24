@@ -30,6 +30,10 @@ a:hover {
 }
 
 a.notwhite {
+    color: #079992;
+}
+
+a.notwhite {
     color: black;
     cursor: pointer;
 }
