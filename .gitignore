@@ -6,6 +6,9 @@
 # Icon must end with two \r
 Icon
 
+/getfeedback
+/crud_ajax
+/news-app
 
 # Thumbnails
 ._*
