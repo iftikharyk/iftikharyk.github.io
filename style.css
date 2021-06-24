@@ -29,6 +29,11 @@ a:hover {
     cursor: none;
 }
 
+a.notwhite {
+    color: black;
+    cursor: pointer;
+}
+
 h1 a {
     color: #fff;
     font-size: 60px;
