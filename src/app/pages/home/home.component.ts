@@ -15,6 +15,10 @@ export class HomeComponent implements OnInit {
   @ViewChild('second2') second2;
   @ViewChild('second3') second3;
 
+  @ViewChild('linker1') linker1;
+  @ViewChild('linker2') linker2;
+  @ViewChild('linker3') linker3;
+
   toggled: boolean = false;
 
   constructor() { }
@@ -27,6 +31,12 @@ export class HomeComponent implements OnInit {
     this.toggled = !this.toggled;
 
     if (this.toggled) {
+
+      setTimeout(() => {
+        this.linker1.nativeElement.style.pointerEvents = "all";
+        this.linker2.nativeElement.style.pointerEvents = "all";
+        this.linker3.nativeElement.style.pointerEvents = "all";
+      }, 500);
 
       setTimeout(() => {
         this.first1.nativeElement.style.display = "none";
@@ -44,6 +54,12 @@ export class HomeComponent implements OnInit {
       }, 900);
 
     } else {
+
+      setTimeout(() => {
+        this.linker1.nativeElement.style.pointerEvents = "none";
+        this.linker2.nativeElement.style.pointerEvents = "none";
+        this.linker3.nativeElement.style.pointerEvents = "none";
+      }, 500);
 
       setTimeout(() => {
         this.first1.nativeElement.style.display = "block";

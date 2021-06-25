@@ -7,19 +7,19 @@
     <div class="vertical-center">
         <h1>
             <div class="hide-text-block">
-                <a href="#">
+                <a [routerLink]="['/about']" #linker1>
                     <div class="text-before label-hello" #first1></div>
                     <div class="text-after" #second1>About</div>
                 </a>
             </div>
             <div class="hide-text-block">
-                <a href="#">
+                <a [routerLink]="['/work']" #linker2>
                     <div class="text-before label-iam" #first2></div>
                     <div class="text-after" #second2>Work</div>
                 </a>
             </div>
             <div class="hide-text-block">
-                <a href="#">
+                <a [routerLink]="['/contact']" #linker3>
                     <div class="text-before label-name" #first3></div>
                     <div class="text-after" #second3>Contact</div>
                 </a>

@@ -130,6 +130,12 @@
                     display: block;
                     overflow: hidden;
 
+                    a, a:visited, a:after {
+                        text-decoration: none;
+                        cursor: pointer;
+                        color: black;
+                    }
+
                     .text-before {
                         animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
                         animation-fill-mode: backwards;
