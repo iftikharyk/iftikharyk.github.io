@@ -122,10 +122,15 @@
                         margin: 4vh 0;
                         font-size: 19px;
                         text-decoration: none;
-                        color: #ea0f1e;
+                        color: #55efc4;
                         transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
                         text-decoration: none;
                         cursor: pointer;
+                    }
+
+                    a:hover {
+                        margin-left: 40px;
+                        transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
                     }
                 }
             }

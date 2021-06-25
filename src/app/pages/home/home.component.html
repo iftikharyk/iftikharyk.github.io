@@ -15,13 +15,13 @@
             <div class="hide-text-block">
                 <a [routerLink]="['/work']" #linker2>
                     <div class="text-before label-iam" #first2></div>
-                    <div class="text-after" #second2>Work</div>
+                    <div class="text-after different" #second2>Work</div>
                 </a>
             </div>
             <div class="hide-text-block">
                 <a [routerLink]="['/contact']" #linker3>
                     <div class="text-before label-name" #first3></div>
-                    <div class="text-after" #second3>Contact</div>
+                    <div class="text-after different" #second3>Contact</div>
                 </a>
             </div>
         </h1>
@@ -29,3 +29,24 @@
 </div>
 
 <div class="bg-photo"></div>
+
+<div id="circularMenu" class="circular-menu">
+
+    <a class="floating-btn" onclick="document.getElementById('circularMenu').classList.toggle('active');">
+        <i class="fa fa-phone openmenu"></i>
+        <i class="fa fa-times closemenu"></i>
+    </a>
+
+    <menu class="items-wrapper">
+        <a href="mailto:iftikharyk@gmail.com" class="menu-item" target="_blank"><i
+                class="fas fa-envelope-square"></i></a>
+        <a href="https://www.linkedin.com/in/iftikhar-yar-khan/" class="menu-item" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/iftikharyk" class="menu-item" target="_blank"><i
+                class="fab fa-github-square"></i></a>
+        <a href="https://stackoverflow.com/users/9103067/iftikharyk" class="menu-item" target="_blank"><i
+                class="fab fa-stack-overflow"></i></a>
+        <a href="https://codepen.io/iftikharyk/" class="menu-item" target="_blank"><i class="fab fa-codepen"></i></a>
+    </menu>
+
+</div>

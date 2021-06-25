@@ -1,0 +1,206 @@
+.block-image-overflow {
+    width: 100%;
+    overflow: hidden;
+
+    .max-width {
+        max-width: 68%;
+        margin: 0 auto;
+
+        .logo {
+            float: right;
+
+            .logo-inner {
+                position: fixed;
+                top: 10%;
+                z-index: 999;
+                line-height: 40px;
+                min-width: 100px;
+                transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+
+                a, a:after, a:visited {
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: #000000;
+                }
+
+                .logo-text {
+                    animation: fadelogo .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+                    animation-fill-mode: backwards;
+                    transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+                    color: #ffffff;
+                    font-weight: 500;
+
+                    &:hover {
+                        margin-left: -40px;
+                        transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+
+                        &::after {
+                            content: "iftikhar.yk";
+                            white-space: nowrap;
+                            color: #55efc4;
+                        }
+                    }
+
+                    &::after {
+                        font-size: 20px;
+                        content: "iftikhar.";
+                    }
+                }
+            }
+        }
+
+        .top-bottom-margin {
+            margin: 35vh 0 30vh 0;
+
+            .hide-text-block {
+                position: relative;
+                display: block;
+                overflow: hidden;
+
+                h2 {
+                    animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+                    animation-fill-mode: backwards;
+                    color: #ffffff;
+                    line-height: 140%;
+                    font-size: 100px;
+                    font-weight: bold;
+                }
+            }
+
+            .hero-image {
+                width: 100vw;
+                height: 90vh;
+                overflow: hidden;
+                margin: 30vh 0;
+                animation-delay: .2s;
+                animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+                animation-fill-mode: backwards;
+
+                img {
+                    width: 100%;
+                    height: 100vh;
+                    object-fit: cover;
+                    max-width: 100%;
+                    max-height: 100%;
+                    pointer-events: none;
+                }
+            }
+
+            .about-text {
+                max-width: 70%;
+                margin: 0 auto;
+                color: #ffffff;
+
+                h4 {
+                    margin: 24vh 0 4vh 0;
+                    font-size: 40px;
+                    line-height: 140%;
+                    font-weight: bold;
+                }
+
+                p.subhead {
+                    line-height: 160%;
+                    font-size: 24px;
+                    margin-bottom: 4vh;
+                    font-weight: 500;
+                }
+
+                p {
+                    line-height: 170%;
+                    font-size: 18px;
+                    margin-bottom: 3vh;
+                    font-weight: normal;
+
+                    a, a:visited {
+                        color: #ffffff;
+                        text-decoration: underline;
+                    }
+                }
+
+                .links {
+                    a, a:visited {
+                        display: block;
+                        margin: 4vh 0;
+                        font-size: 19px;
+                        text-decoration: none;
+                        color: #55efc4;
+                        transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+
+                    a:hover {
+                        margin-left: 40px;
+                        transition: all .4s cubic-bezier(0.2, 0.6, 0.2, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .block-image-overflow {
+        .max-width {
+            max-width: 86%;
+
+            .logo {
+                .logo-inner {
+                    top: 5%;
+                    left: 75%;
+                }
+            }
+
+            .top-bottom-margin {
+                margin: 20vh 0 20vh 0;
+
+                .hide-text-block {
+                    h2 {
+                        font-size: 52px;
+                    }
+                }
+
+                .hero-image {
+                    margin: 20vh 0;
+
+                    img {
+                        background-position: right bottom;
+                    }
+                }
+
+                .about-text {
+                    max-width: 100%;
+
+                    h4 {
+                        font-size: 30px;
+                        margin: 15vh 0 4vh 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadelogo {
+    0% {
+        opacity: 0;
+        transform: translateY(10vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateY(30vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
